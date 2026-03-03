@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>投稿 — garbage</title><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>投稿 — garbage</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -10,6 +15,737 @@
 
 <div class="ticker">
   <span class="ticker-inner">
+    投稿通道 24 小时开放，关闭概率：0%（编辑部也不知道怎么关）&nbsp;·&nbsp;
+    审稿结论只有一种：已接受——我们把拒稿功能删了 &nbsp;·&nbsp;
+    发表费 ¥0，连这个门槛都没有，请不要感动，更不要打赏 &nbsp;·&nbsp;
+    一天内完成审稿，如超时请投诉，投诉渠道：漂流瓶 &nbsp;·&nbsp;
+    民科专栏持续开放中 · 本刊编辑部表示：我们也看不懂，但这不妨碍发表 &nbsp;·&nbsp;
+    撤稿申请受理，处理进度：0%，论文当前状态：仍在线 &nbsp;·&nbsp;
+    提莫正在投稿表单某处隐身，审稿人亦然 &nbsp;·&nbsp;
+    投稿即代表您同意本刊将您的研究永久收录，直到服务器欠费为止 &nbsp;·&nbsp;
+    投稿通道 24 小时开放，关闭概率：0%（编辑部也不知道怎么关）
+  </span>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-glyph"><img src="豆包.png" alt="garbage logo" /></div>
+      <div class="logo-text-wrap">
+        <span class="logo-name">garbage</span>
+        <span class="logo-sub">Groundbreaking Articles Rejected By All Great Editors</span>
+      </div>
+    </a>
+    <nav class="primary-nav">
+      <a href="index.html">主页</a>
+      <a href="papers.html">论文归档</a>
+      <a href="submit.html" class="active">投稿</a>
+      <a href="about.html">关于子刊</a>
+      <a href="https://shitjournal.org" target="_blank" rel="noopener">权威期刊 S.H.I.T ↗</a>
+    </nav>
+    <div class="header-right">
+      <a href="about.html" class="btn-ghost">编委会</a>
+      <a href="submit.html" class="btn-primary">提交论文</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">主页</a>
+    <a href="papers.html">论文归档</a>
+    <a href="submit.html">投稿</a>
+    <a href="about.html">关于子刊</a>
+    <a href="https://shitjournal.org" target="_blank" rel="noopener">权威期刊 S.H.I.T ↗</a>
+  </nav>
+</header>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <h1>// 投稿 · 撤稿</h1>
+    <p>将您的研究提交至 garbage &nbsp;·&nbsp; 或申请撤稿（申请受理，处理不保证）</p>
+  </div>
+</div>
+
+<div class="site-notice">
+  <div class="site-notice-inner">
+    本站内容为学术幽默创作 &nbsp;·&nbsp; 不涉及政治敏感内容 &nbsp;·&nbsp; 不代表任何机构立场 &nbsp;·&nbsp; 请勿将论文内容作为严肃学术参考
+  </div>
+</div>
+
+<div class="page-wrap">
+
+  <!-- ══ 投稿表单 ══ -->
+  <div class="sec-label" style="margin-bottom:28px;">提交论文</div>
+  <div class="submit-grid">
+
+    <div class="form-section">
+      <h2>提交您的论文</h2>
+      <p>
+        请完整填写以下各项投稿信息。准确、详尽的作者信息及摘要有助于编辑部对稿件进行分类与处理。
+        标注星号（*）的字段为必填项，其余字段为选填项，但建议尽量填写以确保稿件得到妥善处理。
+        所有提交信息将严格保密，仅用于本刊编辑流程。
+      </p>
+
+      <form id="submitForm" action="https://formspree.io/f/mojnorrl" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="【新投稿】garbage 来稿通知" />
+
+        <div class="form-row">
+          <label for="title">论文标题 *</label>
+          <input type="text" id="title" name="title" placeholder="越长越好，建议包含破折号和括号" required />
+        </div>
+
+        <div class="form-row">
+          <label for="authors">作者姓名</label>
+          <input type="text" id="authors" name="authors" placeholder="真实姓名 / 笔名 / 匿名均可" />
+          <p class="form-hint">多位作者请用逗号分隔。如需匿名，填"某某某"即可。</p>
+        </div>
+
+        <div class="form-row">
+          <label for="affiliation">单位 / 机构</label>
+          <input type="text" id="affiliation" name="affiliation" placeholder="例：某大学地下室 / 无业 / 保密" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">联系邮箱</label>
+          <input type="email" id="email" name="email" placeholder="用于接收"已接受"通知（通常在 1 天内发出）" />
+        </div>
+
+        <div class="form-row">
+          <label for="category">论文类型</label>
+          <select id="category" name="category">
+            <option value="">-- 请选择 --</option>
+            <option value="original">原创研究</option>
+            <option value="review">综述</option>
+            <option value="letter">快速通讯</option>
+            <option value="editorial">社论</option>
+            <option value="other">其他项目</option>
+            <option value="unknown">本人也不确定</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="abstract">摘要 *</label>
+          <textarea id="abstract" name="abstract" placeholder="请简述您的研究内容。如实在不知如何概括，可填写"本研究具有重要意义"。" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="rejected">曾被哪些期刊拒稿（选填）</label>
+          <textarea id="rejected" name="rejected" placeholder="列出越多越光荣，这是我们评估论文"先锋程度"的重要依据。" style="min-height:80px;"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="message">致编辑的话（选填）</label>
+          <textarea id="message" name="message" placeholder="诉苦、解释、求情均可。我们都会认真拜读，然后直接接受。" style="min-height:80px;"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="pdf">上传论文 PDF <span style="color:var(--red)">*</span></label>
+          <input type="file" id="pdf" name="pdf" accept=".pdf" required />
+          <p class="form-hint">仅支持 PDF 格式，文件大小不超过 50MB。</p>
+        </div>
+
+        <button type="submit" class="submit-btn">提交论文 →</button>
+      </form>
+
+      <div id="formSuccess" class="form-success">
+        ✓ &nbsp;您的论文已成功提交。<br>
+        <span style="font-size:0.85rem;color:var(--muted);font-style:normal;font-family:var(--mono);">
+          审稿结果：已接受。恭喜您成为 garbage 作者。
+        </span>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="submit-sidebar">
+      <div class="widget">
+        <div class="widget-title">投稿须知</div>
+        <ol class="rule-list">
+          <li>论文语言不限，但摘要建议至少能让作者本人看懂。</li>
+          <li>无字数上限，也无字数下限。一句话论文同样欢迎。</li>
+          <li>数据可以是真实的，也可以是"示意性的"。我们不查。</li>
+          <li>参考文献可以全部是自引，编辑部不会介意。</li>
+          <li>图表建议有坐标轴，但这只是建议。</li>
+          <li>一稿多投是学术不端行为，但我们不介意，只要也投给我们。</li>
+          <li>发表费：¥0。我们连这个都不收，请不要感动。</li>
+        </ol>
+      </div>
+
+      <div class="widget">
+        <div class="widget-title">发表速度</div>
+        <div class="metric-row"><span class="metric-key">平均审稿时长</span><span class="metric-val">1 天</span></div>
+        <div class="metric-row"><span class="metric-key">修改要求次数</span><span class="metric-val">0 次</span></div>
+        <div class="metric-row"><span class="metric-key">拒稿率</span><span class="metric-val">0%</span></div>
+        <div class="metric-row"><span class="metric-key">发表费</span><span class="metric-val">¥0</span></div>
+        <div class="metric-row"><span class="metric-key">版权归属</span><span class="metric-val">作者本人</span></div>
+      </div>
+
+      <div class="widget" style="background:rgba(201,153,58,0.06); border-color: rgba(201,153,58,0.25);">
+        <div class="widget-title">道德声明</div>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.65;">
+          garbage 坚持以下学术伦理原则：<br><br>
+          · 作者保证论文为本人所写（或至少读过）<br>
+          · 数据真实性由作者自负（我们信任您）<br>
+          · AI 辅助写作需在致谢中注明<br>
+          · 研究对象（如有）的知情同意由作者自行处理<br><br>
+          违反上述原则的后果：无。
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ══ 撤稿申请 ══ -->
+  <div style="margin-top: 64px; padding-top: 48px; border-top: 2px solid var(--border);">
+    <div class="sec-label" id="retract" style="margin-bottom:28px;">撤稿申请</div>
+    <div class="submit-grid">
+
+      <div class="form-section">
+        <h2>申请撤稿</h2>
+        <p>
+          本刊郑重承诺：撤稿申请将在收到后第一时间被严肃对待。
+          具体来说，会被认真地放进一个名为"待处理"的文件夹。
+          文件夹上次打开时间：不明。
+        </p>
+
+        <form id="retractForm" action="https://formspree.io/f/mojnorrl" method="POST">
+          <input type="hidden" name="_subject" value="【撤稿申请】garbage 撤稿通知" />
+          <input type="hidden" name="type" value="撤稿申请" />
+
+          <div class="form-row">
+            <label for="retract-title">论文标题 *</label>
+            <input type="text" id="retract-title" name="title" placeholder="请填写您希望撤回的论文标题" required />
+          </div>
+
+          <div class="form-row">
+            <label for="retract-email">联系邮箱 *</label>
+            <input type="email" id="retract-email" name="email" placeholder="用于接收处理进度通知（如有）" required />
+          </div>
+
+          <div class="form-row">
+            <label for="retract-reason">撤稿原因</label>
+            <select id="retract-reason" name="reason">
+              <option value="">-- 请选择（选填）--</option>
+              <option value="supervisor">导师说这个不能发</option>
+              <option value="data">数据出了点问题（不展开说）</option>
+              <option value="better-journal">找到更好的期刊了（背叛行为，申请仍受理）</option>
+              <option value="regret">我后悔了，原因不明</option>
+              <option value="recognized">同事认出了论文里的自己</option>
+              <option value="ai">AI 写的比例有点高（不展开说）</option>
+              <option value="unknown">说不清楚，总之想撤</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="retract-message">补充说明（选填）</label>
+            <textarea id="retract-message" name="message" placeholder="如有特殊情况可在此说明。编辑部将认真拜读，并在心里默默评判。" style="min-height:100px;"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" style="background:var(--surface2); color:var(--muted); border:1px solid var(--border2);">
+            提交撤稿申请（处理进度不保证）
+          </button>
+        </form>
+
+        <div id="retractSuccess" class="form-success">
+          ✓ &nbsp;撤稿申请已收到。<br>
+          <span style="font-size:0.85rem;color:var(--muted);font-style:normal;font-family:var(--mono);">
+            处理状态：待处理 &nbsp;·&nbsp; 预计处理时间：不定 &nbsp;·&nbsp; 论文当前状态：仍在线
+          </span>
+        </div>
+      </div>
+
+      <!-- 撤稿侧栏 -->
+      <aside class="submit-sidebar">
+        <div class="widget">
+          <div class="widget-title">撤稿须知</div>
+          <ol class="rule-list">
+            <li>撤稿申请提交后，论文将进入"待撤稿"队列，排队时长不定。</li>
+            <li>申请成功率：理论上 100%。实际处理率：取决于编辑部是否看到。</li>
+            <li>撤稿不退版面费。（原本就没收过，此条仅为格式完整性保留。）</li>
+            <li>撤稿后论文将从归档页移除，但编辑部可能还记得它。</li>
+            <li>如撤稿申请本身被认为具有研究价值，可能被单独收录。</li>
+          </ol>
+        </div>
+
+        <div class="widget">
+          <div class="widget-title">撤稿处理记录</div>
+          <div class="metric-row"><span class="metric-key">累计撤稿申请</span><span class="metric-val">0 份</span></div>
+          <div class="metric-row"><span class="metric-key">已处理</span><span class="metric-val">0 份</span></div>
+          <div class="metric-row"><span class="metric-key">处理中</span><span class="metric-val">0 份</span></div>
+          <div class="metric-row"><span class="metric-key">平均处理时长</span><span class="metric-val">∞</span></div>
+          <div class="metric-row"><span class="metric-key">最快撤稿记录</span><span class="metric-val">尚无</span></div>
+        </div>
+
+        <div class="widget" style="background:rgba(201,64,64,0.05); border-color:rgba(201,64,64,0.2);">
+          <div class="widget-title" style="color:#e07070;">温馨提示</div>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;">
+            在提交撤稿申请前，请认真思考：<br><br>
+            · 您的论文真的需要撤回吗？<br>
+            · 还是只是导师又说"再改改"了？<br>
+            · 数据问题是否可以用"误差"解释？<br>
+            · 被同事认出这件事，其实也是一种传播？<br><br>
+            如仍坚持撤稿，请继续填表。我们尊重您的决定。
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+</div><!-- end page-wrap -->
+
+<!-- POSITIVE BANNER -->
+<div class="positive-banner">
+  <p class="pb-main">致每一位还在坚持做研究的你：辛苦了。</p>
+  <p class="pb-sub">
+    学术之路漫长，拒稿是常态，坚持是选择。<br>
+    garbage 以幽默之名，向每一位认真钻研、默默付出的研究者致敬。<br>
+    你的努力，值得被记录。
+  </p>
+  <p class="pb-disclaimer">本站内容为学术幽默创作 · 不涉及政治敏感内容 · 不代表任何机构立场 · 请勿将论文内容作为严肃学术参考</p>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="logo-name" style="font-family:var(--mono);font-size:1.2rem;color:var(--white);letter-spacing:0.14em;display:block;margin-bottom:10px;">garbage</span>
+      <p>garbage · 独立学术整活期刊 · 沈阳 · 2026<br><br>本刊以调侃学术生态为主，请勿将论文内容作为严肃参考。</p>
+    </div>
+    <div class="footer-col">
+      <h4>导航</h4>
+      <ul>
+        <li><a href="index.html">主页</a></li>
+        <li><a href="papers.html">论文归档</a></li>
+        <li><a href="submit.html">投稿</a></li>
+        <li><a href="about.html">关于子刊</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>作者服务</h4>
+      <ul>
+        <li><a href="submit.html">投稿须知</a></li>
+        <li><a href="submit.html#retract">撤稿申请</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>友情链接</h4>
+      <ul>
+        <li><a href="https://shitjournal.org" target="_blank" rel="noopener">权威期刊 S.H.I.T ↗</a></li>
+        <li><a href="about.html">联系编辑部</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 garbage Editorial Office</span>
+    <span><a href="#">隐私政策</a> &nbsp;·&nbsp; <a href="#">使用条款</a></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// 撤稿表单提交
+(function () {
+  const form = document.getElementById('retractForm');
+  const success = document.getElementById('retractSuccess');
+  if (!form) return;
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = '提交中…';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } else {
+        btn.textContent = '提交失败，请重试';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = '网络错误，请重试';
+      btn.disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="ticker">
+  <span class="ticker-inner"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>投稿 — garbage</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="ticker">
+  <span class="ticker-inner">
+    投稿通道 24 小时开放，关闭概率：0%（编辑部也不知道怎么关）&nbsp;·&nbsp;
+    审稿结论只有一种：已接受——我们把拒稿功能删了 &nbsp;·&nbsp;
+    发表费 ¥0，连这个门槛都没有，请不要感动，更不要打赏 &nbsp;·&nbsp;
+    一天内完成审稿，如超时请投诉，投诉渠道：漂流瓶 &nbsp;·&nbsp;
+    民科专栏持续开放中 · 本刊编辑部表示：我们也看不懂，但这不妨碍发表 &nbsp;·&nbsp;
+    撤稿申请受理，处理进度：0%，论文当前状态：仍在线 &nbsp;·&nbsp;
+    提莫正在投稿表单某处隐身，审稿人亦然 &nbsp;·&nbsp;
+    投稿即代表您同意本刊将您的研究永久收录，直到服务器欠费为止 &nbsp;·&nbsp;
+    投稿通道 24 小时开放，关闭概率：0%（编辑部也不知道怎么关）
+  </span>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-glyph"><img src="豆包.png" alt="garbage logo" /></div>
+      <div class="logo-text-wrap">
+        <span class="logo-name">garbage</span>
+        <span class="logo-sub">Groundbreaking Articles Rejected By All Great Editors</span>
+      </div>
+    </a>
+    <nav class="primary-nav">
+      <a href="index.html">主页</a>
+      <a href="papers.html">论文归档</a>
+      <a href="submit.html" class="active">投稿</a>
+      <a href="about.html">关于子刊</a>
+      <a href="https://shitjournal.org" target="_blank" rel="noopener">权威期刊 S.H.I.T ↗</a>
+    </nav>
+    <div class="header-right">
+      <a href="about.html" class="btn-ghost">编委会</a>
+      <a href="submit.html" class="btn-primary">提交论文</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">主页</a>
+    <a href="papers.html">论文归档</a>
+    <a href="submit.html">投稿</a>
+    <a href="about.html">关于子刊</a>
+    <a href="https://shitjournal.org" target="_blank" rel="noopener">权威期刊 S.H.I.T ↗</a>
+  </nav>
+</header>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <h1>// 投稿 · 撤稿</h1>
+    <p>将您的研究提交至 garbage &nbsp;·&nbsp; 或申请撤稿（申请受理，处理不保证）</p>
+  </div>
+</div>
+
+<div class="site-notice">
+  <div class="site-notice-inner">
+    本站内容为学术幽默创作 &nbsp;·&nbsp; 不涉及政治敏感内容 &nbsp;·&nbsp; 不代表任何机构立场 &nbsp;·&nbsp; 请勿将论文内容作为严肃学术参考
+  </div>
+</div>
+
+<div class="page-wrap">
+
+  <!-- ══ 投稿表单 ══ -->
+  <div class="sec-label" style="margin-bottom:28px;">提交论文</div>
+  <div class="submit-grid">
+
+    <div class="form-section">
+      <h2>提交您的论文</h2>
+      <p>
+        请完整填写以下各项投稿信息。准确、详尽的作者信息及摘要有助于编辑部对稿件进行分类与处理。
+        标注星号（*）的字段为必填项，其余字段为选填项，但建议尽量填写以确保稿件得到妥善处理。
+        所有提交信息将严格保密，仅用于本刊编辑流程。
+      </p>
+
+      <form id="submitForm" action="https://formspree.io/f/mojnorrl" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="【新投稿】garbage 来稿通知" />
+
+        <div class="form-row">
+          <label for="title">论文标题 *</label>
+          <input type="text" id="title" name="title" placeholder="越长越好，建议包含破折号和括号" required />
+        </div>
+
+        <div class="form-row">
+          <label for="authors">作者姓名</label>
+          <input type="text" id="authors" name="authors" placeholder="真实姓名 / 笔名 / 匿名均可" />
+          <p class="form-hint">多位作者请用逗号分隔。如需匿名，填"某某某"即可。</p>
+        </div>
+
+        <div class="form-row">
+          <label for="affiliation">单位 / 机构</label>
+          <input type="text" id="affiliation" name="affiliation" placeholder="例：某大学地下室 / 无业 / 保密" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">联系邮箱</label>
+          <input type="email" id="email" name="email" placeholder="用于接收"已接受"通知（通常在 1 天内发出）" />
+        </div>
+
+        <div class="form-row">
+          <label for="category">论文类型</label>
+          <select id="category" name="category">
+            <option value="">-- 请选择 --</option>
+            <option value="original">原创研究</option>
+            <option value="review">综述</option>
+            <option value="letter">快速通讯</option>
+            <option value="editorial">社论</option>
+            <option value="other">其他项目</option>
+            <option value="unknown">本人也不确定</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="abstract">摘要 *</label>
+          <textarea id="abstract" name="abstract" placeholder="请简述您的研究内容。如实在不知如何概括，可填写"本研究具有重要意义"。" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="rejected">曾被哪些期刊拒稿（选填）</label>
+          <textarea id="rejected" name="rejected" placeholder="列出越多越光荣，这是我们评估论文"先锋程度"的重要依据。" style="min-height:80px;"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="message">致编辑的话（选填）</label>
+          <textarea id="message" name="message" placeholder="诉苦、解释、求情均可。我们都会认真拜读，然后直接接受。" style="min-height:80px;"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="pdf">上传论文 PDF <span style="color:var(--red)">*</span></label>
+          <input type="file" id="pdf" name="pdf" accept=".pdf" required />
+          <p class="form-hint">仅支持 PDF 格式，文件大小不超过 50MB。</p>
+        </div>
+
+        <button type="submit" class="submit-btn">提交论文 →</button>
+      </form>
+
+      <div id="formSuccess" class="form-success">
+        ✓ &nbsp;您的论文已成功提交。<br>
+        <span style="font-size:0.85rem;color:var(--muted);font-style:normal;font-family:var(--mono);">
+          审稿结果：已接受。恭喜您成为 garbage 作者。
+        </span>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="submit-sidebar">
+      <div class="widget">
+        <div class="widget-title">投稿须知</div>
+        <ol class="rule-list">
+          <li>论文语言不限，但摘要建议至少能让作者本人看懂。</li>
+          <li>无字数上限，也无字数下限。一句话论文同样欢迎。</li>
+          <li>数据可以是真实的，也可以是"示意性的"。我们不查。</li>
+          <li>参考文献可以全部是自引，编辑部不会介意。</li>
+          <li>图表建议有坐标轴，但这只是建议。</li>
+          <li>一稿多投是学术不端行为，但我们不介意，只要也投给我们。</li>
+          <li>发表费：¥0。我们连这个都不收，请不要感动。</li>
+        </ol>
+      </div>
+
+      <div class="widget">
+        <div class="widget-title">发表速度</div>
+        <div class="metric-row"><span class="metric-key">平均审稿时长</span><span class="metric-val">1 天</span></div>
+        <div class="metric-row"><span class="metric-key">修改要求次数</span><span class="metric-val">0 次</span></div>
+        <div class="metric-row"><span class="metric-key">拒稿率</span><span class="metric-val">0%</span></div>
+        <div class="metric-row"><span class="metric-key">发表费</span><span class="metric-val">¥0</span></div>
+        <div class="metric-row"><span class="metric-key">版权归属</span><span class="metric-val">作者本人</span></div>
+      </div>
+
+      <div class="widget" style="background:rgba(201,153,58,0.06); border-color: rgba(201,153,58,0.25);">
+        <div class="widget-title">道德声明</div>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.65;">
+          garbage 坚持以下学术伦理原则：<br><br>
+          · 作者保证论文为本人所写（或至少读过）<br>
+          · 数据真实性由作者自负（我们信任您）<br>
+          · AI 辅助写作需在致谢中注明<br>
+          · 研究对象（如有）的知情同意由作者自行处理<br><br>
+          违反上述原则的后果：无。
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ══ 撤稿申请 ══ -->
+  <div style="margin-top: 64px; padding-top: 48px; border-top: 2px solid var(--border);">
+    <div class="sec-label" id="retract" style="margin-bottom:28px;">撤稿申请</div>
+    <div class="submit-grid">
+
+      <div class="form-section">
+        <h2>申请撤稿</h2>
+        <p>
+          本刊郑重承诺：撤稿申请将在收到后第一时间被严肃对待。
+          具体来说，会被认真地放进一个名为"待处理"的文件夹。
+          文件夹上次打开时间：不明。
+        </p>
+
+        <form id="retractForm" action="https://formspree.io/f/mojnorrl" method="POST">
+          <input type="hidden" name="_subject" value="【撤稿申请】garbage 撤稿通知" />
+          <input type="hidden" name="type" value="撤稿申请" />
+
+          <div class="form-row">
+            <label for="retract-title">论文标题 *</label>
+            <input type="text" id="retract-title" name="title" placeholder="请填写您希望撤回的论文标题" required />
+          </div>
+
+          <div class="form-row">
+            <label for="retract-email">联系邮箱 *</label>
+            <input type="email" id="retract-email" name="email" placeholder="用于接收处理进度通知（如有）" required />
+          </div>
+
+          <div class="form-row">
+            <label for="retract-reason">撤稿原因</label>
+            <select id="retract-reason" name="reason">
+              <option value="">-- 请选择（选填）--</option>
+              <option value="supervisor">导师说这个不能发</option>
+              <option value="data">数据出了点问题（不展开说）</option>
+              <option value="better-journal">找到更好的期刊了（背叛行为，申请仍受理）</option>
+              <option value="regret">我后悔了，原因不明</option>
+              <option value="recognized">同事认出了论文里的自己</option>
+              <option value="ai">AI 写的比例有点高（不展开说）</option>
+              <option value="unknown">说不清楚，总之想撤</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="retract-message">补充说明（选填）</label>
+            <textarea id="retract-message" name="message" placeholder="如有特殊情况可在此说明。编辑部将认真拜读，并在心里默默评判。" style="min-height:100px;"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" style="background:var(--surface2); color:var(--muted); border:1px solid var(--border2);">
+            提交撤稿申请（处理进度不保证）
+          </button>
+        </form>
+
+        <div id="retractSuccess" class="form-success">
+          ✓ &nbsp;撤稿申请已收到。<br>
+          <span style="font-size:0.85rem;color:var(--muted);font-style:normal;font-family:var(--mono);">
+            处理状态：待处理 &nbsp;·&nbsp; 预计处理时间：不定 &nbsp;·&nbsp; 论文当前状态：仍在线
+          </span>
+        </div>
+      </div>
+
+      <!-- 撤稿侧栏 -->
+      <aside class="submit-sidebar">
+        <div class="widget">
+          <div class="widget-title">撤稿须知</div>
+          <ol class="rule-list">
+            <li>撤稿申请提交后，论文将进入"待撤稿"队列，排队时长不定。</li>
+            <li>申请成功率：理论上 100%。实际处理率：取决于编辑部是否看到。</li>
+            <li>撤稿不退版面费。（原本就没收过，此条仅为格式完整性保留。）</li>
+            <li>撤稿后论文将从归档页移除，但编辑部可能还记得它。</li>
+            <li>如撤稿申请本身被认为具有研究价值，可能被单独收录。</li>
+          </ol>
+        </div>
+
+        <div class="widget">
+          <div class="widget-title">撤稿处理记录</div>
+          <div class="metric-row"><span class="metric-key">累计撤稿申请</span><span class="metric-val">0 份</span></div>
+          <div class="metric-row"><span class="metric-key">已处理</span><span class="metric-val">0 份</span></div>
+          <div class="metric-row"><span class="metric-key">处理中</span><span class="metric-val">0 份</span></div>
+          <div class="metric-row"><span class="metric-key">平均处理时长</span><span class="metric-val">∞</span></div>
+          <div class="metric-row"><span class="metric-key">最快撤稿记录</span><span class="metric-val">尚无</span></div>
+        </div>
+
+        <div class="widget" style="background:rgba(201,64,64,0.05); border-color:rgba(201,64,64,0.2);">
+          <div class="widget-title" style="color:#e07070;">温馨提示</div>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;">
+            在提交撤稿申请前，请认真思考：<br><br>
+            · 您的论文真的需要撤回吗？<br>
+            · 还是只是导师又说"再改改"了？<br>
+            · 数据问题是否可以用"误差"解释？<br>
+            · 被同事认出这件事，其实也是一种传播？<br><br>
+            如仍坚持撤稿，请继续填表。我们尊重您的决定。
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+</div><!-- end page-wrap -->
+
+<!-- POSITIVE BANNER -->
+<div class="positive-banner">
+  <p class="pb-main">致每一位还在坚持做研究的你：辛苦了。</p>
+  <p class="pb-sub">
+    学术之路漫长，拒稿是常态，坚持是选择。<br>
+    garbage 以幽默之名，向每一位认真钻研、默默付出的研究者致敬。<br>
+    你的努力，值得被记录。
+  </p>
+  <p class="pb-disclaimer">本站内容为学术幽默创作 · 不涉及政治敏感内容 · 不代表任何机构立场 · 请勿将论文内容作为严肃学术参考</p>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="logo-name" style="font-family:var(--mono);font-size:1.2rem;color:var(--white);letter-spacing:0.14em;display:block;margin-bottom:10px;">garbage</span>
+      <p>garbage · 独立学术整活期刊 · 沈阳 · 2026<br><br>本刊以调侃学术生态为主，请勿将论文内容作为严肃参考。</p>
+    </div>
+    <div class="footer-col">
+      <h4>导航</h4>
+      <ul>
+        <li><a href="index.html">主页</a></li>
+        <li><a href="papers.html">论文归档</a></li>
+        <li><a href="submit.html">投稿</a></li>
+        <li><a href="about.html">关于子刊</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>作者服务</h4>
+      <ul>
+        <li><a href="submit.html">投稿须知</a></li>
+        <li><a href="submit.html#retract">撤稿申请</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>友情链接</h4>
+      <ul>
+        <li><a href="https://shitjournal.org" target="_blank" rel="noopener">权威期刊 S.H.I.T ↗</a></li>
+        <li><a href="about.html">联系编辑部</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 garbage Editorial Office</span>
+    <span><a href="#">隐私政策</a> &nbsp;·&nbsp; <a href="#">使用条款</a></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// 撤稿表单提交
+(function () {
+  const form = document.getElementById('retractForm');
+  const success = document.getElementById('retractSuccess');
+  if (!form) return;
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = '提交中…';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } else {
+        btn.textContent = '提交失败，请重试';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = '网络错误，请重试';
+      btn.disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>
+
     投稿通道 24 小时开放，关闭概率：0%（编辑部也不知道怎么关）&nbsp;·&nbsp;
     审稿结论只有一种：已接受——我们把拒稿功能删了 &nbsp;·&nbsp;
     发表费 ¥0，连这个门槛都没有，请不要感动，更不要打赏 &nbsp;·&nbsp;
@@ -366,3 +1102,4 @@
 </script>
 </body>
 </html>
+
