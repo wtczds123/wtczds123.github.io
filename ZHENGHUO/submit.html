@@ -80,7 +80,7 @@
         所有提交信息将严格保密，仅用于本刊编辑流程。
       </p>
 
-      <form id="submitForm" action="https://formspree.io/f/mojnorrl" method="POST" enctype="multipart/form-data">
+      <form id="submitForm" action="https://formspree.io/f/mojnorrl" method="POST">
         <input type="hidden" name="_subject" value="【新投稿】garbage 来稿通知" />
 
         <div class="form-row">
@@ -133,9 +133,9 @@
         </div>
 
         <div class="form-row">
-          <label for="pdf">上传论文 PDF <span style="color:var(--red)">*</span></label>
-          <input type="file" id="pdf" name="pdf" accept=".pdf" required />
-          <p class="form-hint">仅支持 PDF 格式，文件大小不超过 50MB。</p>
+          <label for="fulltext">论文全文 <span style="color:var(--red)">*</span></label>
+          <textarea id="fulltext" name="fulltext" placeholder="请将论文全文复制粘贴至此处。格式不限，能看懂即可。" style="min-height:200px;" required></textarea>
+          <p class="form-hint">直接粘贴文字即可，无需上传文件。</p>
         </div>
 
         <button type="submit" class="submit-btn">提交论文 →</button>
